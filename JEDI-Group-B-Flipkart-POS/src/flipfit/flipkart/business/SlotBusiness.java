@@ -1,10 +1,13 @@
 package flipfit.flipkart.business;
 
 public class SlotBusiness {
-    public void slotStatus() {
-        System.out.println("Empty/Full");
+
+    public void updateAvailability(){
+        System.out.println("Availability");
     }
-    public void slotAssignedTo() {
-        System.out.println("Name");
+
+    public void getSlotDetails() {
+        System.out.println("Slot Details");
     }
+
 }

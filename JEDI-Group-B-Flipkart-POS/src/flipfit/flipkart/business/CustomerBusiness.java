@@ -2,29 +2,7 @@ package flipfit.flipkart.business;
 
 import java.util.*;
 
-import flipfit.flipkart.bean.Customer;
-import flipfit.flipkart.DAO.CustomerDAO;
-
 public class CustomerBusiness {
-    private CustomerDAO custDatabase;
-
-    // Constructor to initialize CustomerDAO
-    public CustomerBusiness() {
-        this.custDatabase = new CustomerDAO();
-    }
-
-    // Method to create a new customer
-    public void createCustomer(int id, String name, String emailAddress, int phone, String password) {
-        Customer customer = new Customer();
-        customer.setCustId(id);
-        customer.setCustName(name);
-        customer.setCustEmail(emailAddress);
-        customer.setCustPhone(phone);
-        customer.setPassword(password);
-
-        custDatabase.add(customer);
-        System.out.println("Customer Added");
-    }
 
 
     public void bookSlot(String gym) {
@@ -110,4 +88,6 @@ public class CustomerBusiness {
             option++;
         }
     }
+
+
 }
