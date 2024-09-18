@@ -1,6 +1,6 @@
 package flipfit.flipkart.business;
 
-public class GymCenterBusiness {
+public class FlipFitGymCenterBusiness {
 
     public void viewAvailableSlots(){
         System.out.println("Viewing available slots");
@@ -12,10 +12,5 @@ public class GymCenterBusiness {
 
     public void setCenterDetails(){
         System.out.println("Setting center details");
-    }
-
-    public boolean deleteCenter(){
-        System.out.println("Deleting center");
-        return true;
     }
 }

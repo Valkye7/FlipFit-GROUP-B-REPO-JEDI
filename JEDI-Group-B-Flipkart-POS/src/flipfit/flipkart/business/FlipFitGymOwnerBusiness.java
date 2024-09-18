@@ -1,21 +1,28 @@
 package flipfit.flipkart.business;
 
-public class GymOwnerBusiness {
+public class FlipFitGymOwnerBusiness {
 
-    public boolean addCenter(){
+    public void addCenter(){
         System.out.println("Add center");
-        return true;
     }
 
-    public void viewCenters(){
+    public void addSlot(){};
+
+    public void getCenters(){
         System.out.println("view centers");
     }
 
-    public void viewCustomers(){
+    public void getCustomers(){
         System.out.println("view customers");
     }
 
-    public void viewPaymentStatus(){
+    public void registerOwner(){}
+
+    public void loginOwner(){
+
+    }
+
+    public void getPaymentStatus(){
         System.out.println("view payment status");
     }
 
