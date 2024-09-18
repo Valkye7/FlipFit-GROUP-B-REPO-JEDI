@@ -1,0 +1,69 @@
+package flipfit.flipkart.bean;
+
+public class FlipFitGymCentre {
+    private int centreID;
+    private int ownerID;
+    private int capacity;
+    private boolean approved;
+    private String city;
+    private String state;
+    private int pincode;
+
+
+    public int getCentreID() {
+        return centreID;
+    }
+
+    public void setCentreID(int centreID) {
+        this.centreID = centreID;
+    }
+
+    public int getOwnerID() {
+        return ownerID;
+    }
+
+    public void setOwnerID(int ownerID) {
+        this.ownerID = ownerID;
+    }
+
+
+    public int getCapacity() {
+        return capacity;
+    }
+
+    public void setCapacity(int capacity) {
+        this.capacity = capacity;
+    }
+
+    public boolean isApproved() {
+        return approved;
+    }
+
+    public void setApproved(boolean approved) {
+        this.approved = approved;
+    }
+
+    public String getCity() {
+        return city;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
+    }
+
+    public String getState() {
+        return state;
+    }
+
+    public void setState(String state) {
+        this.state = state;
+    }
+
+    public int getPincode() {
+        return pincode;
+    }
+
+    public void setPincode(int pincode) {
+        this.pincode = pincode;
+    }
+}
