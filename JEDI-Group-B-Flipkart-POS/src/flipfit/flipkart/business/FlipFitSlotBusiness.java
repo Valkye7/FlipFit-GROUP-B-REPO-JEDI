@@ -1,6 +1,6 @@
 package flipfit.flipkart.business;
 
-public class SlotBusiness {
+public class FlipFitSlotBusiness {
 
     public void updateAvailability(){
         System.out.println("Availability");

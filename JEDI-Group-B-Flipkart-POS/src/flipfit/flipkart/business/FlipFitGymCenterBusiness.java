@@ -1,6 +1,6 @@
 package flipfit.flipkart.business;
 
-public class GymCenterBusiness {
+public class FlipFitGymCenterBusiness {
 
     public void viewAvailableSlots(){
         System.out.println("Viewing available slots");
