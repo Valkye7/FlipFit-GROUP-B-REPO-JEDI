@@ -64,7 +64,7 @@ public class FlipFitGymApplication {
                     System.out.print("Enter your email address:");
                     String emailID = in.next();
 
-                    System.out.print("Enter your phone number:> ");
+                    System.out.print("Enter your phone number");
                     String phoneNumber = in.next();
 
                     System.out.print("Enter your city");
