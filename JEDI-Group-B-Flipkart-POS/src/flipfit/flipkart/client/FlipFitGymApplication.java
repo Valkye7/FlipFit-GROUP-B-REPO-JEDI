@@ -25,11 +25,11 @@ public class FlipFitGymApplication {
             switch (decision) {
                 case 1: {
                     System.out.println("Welcome To FlipFit");
-                    System.out.print("Enter your emailId:> ");
+                    System.out.println("Enter your emailId:> ");
                     String username = in.next();
-                    System.out.print("Enter your password:> ");
+                    System.out.println("Enter your password:> ");
                     String password = in.next();
-                    System.out.print("Enter your role :-> Customer/Admin/GymOwner ");
+                    System.out.println("Enter your role :-> Customer/Admin/GymOwner ");
                     String role = in.next();
                     switch (role) {
                         case "Customer": {
@@ -64,19 +64,19 @@ public class FlipFitGymApplication {
                     System.out.print("Enter your email address:");
                     String emailID = in.next();
 
-                    System.out.print("Enter your phone number:> ");
+                    System.out.println("Enter your phone number:> ");
                     String phoneNumber = in.next();
 
-                    System.out.print("Enter your city");
+                    System.out.println("Enter your city");
                     String city = in.next();
 
-                    System.out.print("Enter your pin code");
+                    System.out.println("Enter your pin code");
                     String pinCode = in.next();
 
-                    System.out.print("Enter your password");
+                    System.out.println("Enter your password");
                     String password = in.next();
 
-                    System.out.print("Enter username");
+                    System.out.println("Enter username");
                     String username = in.next();
 
                     System.out.println("Registration completed for " + username);
@@ -86,31 +86,31 @@ public class FlipFitGymApplication {
                 }
                 case 3: {
                     System.out.println("--------- Registration of Gym Owner ---------");
-                    System.out.print("Enter your email address");
+                    System.out.println("Enter your email address");
                     String emailID = in.next();
 
-                    System.out.print("Enter your phone number");
+                    System.out.println("Enter your phone number");
                     String phoneNumber = in.next();
 
-                    System.out.print("Enter your city");
+                    System.out.println("Enter your city");
                     String city = in.next();
 
-                    System.out.print("Enter your pin code");
+                    System.out.println("Enter your pin code");
                     String pinCode = in.next();
 
-                    System.out.print("Enter your password");
+                    System.out.println("Enter your password");
                     String password = in.next();
 
-                    System.out.print("Enter username");
+                    System.out.println("Enter username");
                     String username = in.next();
 
-                    System.out.print("Enter your panId");
+                    System.out.println("Enter your panId");
                     String panId = in.next();
 
-                    System.out.print("Enter your gstNum:");
+                    System.out.println("Enter your gstNum:");
                     String gstNum = in.next();
 
-                    System.out.print("Enter your aadharNumber");
+                    System.out.println("Enter your aadharNumber");
                     String aadharNumber = in.next();
 
                     System.out.println("Successfully registered " + username);
