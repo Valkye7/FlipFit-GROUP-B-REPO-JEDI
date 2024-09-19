@@ -26,6 +26,12 @@ public class FlipFitAdminBusiness {
     public void getGymCentreByOwnerId(int ownerId){
         System.out.println("Viewing FlipFit Gym Centre of OwnerID " + ownerId);
     }
+    public void updateAvailability(){
+        System.out.println("Availability");
+    }
+    public void getCenterDetails(){
+        System.out.println("Getting center details");
+    }
 
 
 

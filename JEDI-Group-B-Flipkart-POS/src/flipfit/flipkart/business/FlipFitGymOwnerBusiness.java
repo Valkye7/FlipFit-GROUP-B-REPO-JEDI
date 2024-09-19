@@ -21,7 +21,9 @@ public class FlipFitGymOwnerBusiness {
     public void loginOwner(){
 
     }
-
+    public void setCenterDetails(){
+        System.out.println("Setting center details");
+    }
     public void getPaymentStatus(){
         System.out.println("view payment status");
     }

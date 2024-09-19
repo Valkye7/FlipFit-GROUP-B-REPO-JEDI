@@ -1,6 +1,6 @@
 package flipfit.flipkart.client;
 
-public class GymAdminMenu {
+public class FlipFitGymAdminMenu {
     public static void getAdminView(){
         System.out.println("Admin View");
     }

@@ -1,6 +1,6 @@
 package flipfit.flipkart.client;
 
-public class PaymentMenu {
+public class FlipFitPaymentMenu {
 
     public static boolean getFlipFitPaymentMenu(){
         return true;

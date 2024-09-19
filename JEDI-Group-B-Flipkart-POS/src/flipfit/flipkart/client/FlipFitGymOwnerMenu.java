@@ -1,7 +1,7 @@
 package flipfit.flipkart.client;
 
-public class GymOwnerMenu {
-    public static void getFlipFitOwnerView(){
+public class FlipFitGymOwnerMenu {
+    public static void getFlipFitGymOwnerView(){
         System.out.println("FlipFit owner view");
     }
 }

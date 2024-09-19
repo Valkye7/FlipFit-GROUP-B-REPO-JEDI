@@ -9,7 +9,6 @@ public class FlipFitGymCentre {
     private String state;
     private int pincode;
 
-
     public int getCentreID() {
         return centreID;
     }
