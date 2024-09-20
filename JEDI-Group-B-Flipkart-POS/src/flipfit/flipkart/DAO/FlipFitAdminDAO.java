@@ -62,7 +62,7 @@ public class FlipFitAdminDAO {
     public List<FlipFitGymOwner> getApprovedOwnerList() {
         List<FlipFitGymOwner> approvedOwners = new ArrayList<>();
         try (Connection conn = getConnection();
-             PreparedStatement stmt = conn.prepareStatement("SELECT * FROM GymOwner WHERE approved = 1");
+             PreparedStatement stmt = conn.prepareStatement("SELECT * FROM FlipFitGymOwner WHERE approved = 1");
              ResultSet rs = stmt.executeQuery()) {
 
             while (rs.next()) {
@@ -83,7 +83,7 @@ public class FlipFitAdminDAO {
     public List<FlipFitCustomer> getUserList() {
         List<FlipFitCustomer> users = new ArrayList<>();
         try (Connection conn = getConnection();
-             PreparedStatement stmt = conn.prepareStatement("SELECT * FROM User");
+             PreparedStatement stmt = conn.prepareStatement("SELECT * FROM FlipFitUser");
              ResultSet rs = stmt.executeQuery()) {
 
             while (rs.next()) {
