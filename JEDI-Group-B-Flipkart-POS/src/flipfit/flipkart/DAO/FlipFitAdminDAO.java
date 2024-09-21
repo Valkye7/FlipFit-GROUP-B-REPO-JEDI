@@ -83,7 +83,7 @@ public class FlipFitAdminDAO {
     public List<FlipFitCustomer> getUserList() {
         List<FlipFitCustomer> users = new ArrayList<>();
         try (Connection conn = getConnection();
-             PreparedStatement stmt = conn.prepareStatement("SELECT * FROM User");
+             PreparedStatement stmt = conn.prepareStatement("SELECT * FROM FlipFitUser");
              ResultSet rs = stmt.executeQuery()) {
 
             while (rs.next()) {
