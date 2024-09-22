@@ -5,7 +5,7 @@ public class FlipFitGymOwner{
     private String fullName ;
     private String email ;
     private String password ;
-    private int phoneNumber ;
+    private String phoneNumber ;
     private String city ;
     private String state ;
     private String country ;
@@ -47,11 +47,11 @@ public class FlipFitGymOwner{
         this.password = password;
     }
 
-    public int getPhoneNumber() {
+    public String getPhoneNumber() {
         return phoneNumber;
     }
 
-    public void setPhoneNumber(int phoneNumber) {
+    public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
 
@@ -117,5 +117,8 @@ public class FlipFitGymOwner{
 
     public void setGSTIN(String GSTIN) {
         this.GSTIN = GSTIN;
+    }
+
+    public void setRole(int i) {
     }
 }

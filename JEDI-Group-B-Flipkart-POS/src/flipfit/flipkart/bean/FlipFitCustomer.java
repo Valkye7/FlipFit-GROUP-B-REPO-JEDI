@@ -5,7 +5,7 @@ public class FlipFitCustomer{
     private String fullName ;
     private String email ;
     private String password ;
-    private int phoneNumber ;
+    private String phoneNumber ;
     private String city ;
     private String state ;
     private String country ;
@@ -45,11 +45,11 @@ public class FlipFitCustomer{
         this.password = password;
     }
 
-    public int getPhoneNumber() {
+    public String getPhoneNumber() {
         return phoneNumber;
     }
 
-    public void setPhoneNumber(int phoneNumber) {
+    public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
 
@@ -99,5 +99,8 @@ public class FlipFitCustomer{
 
     public void setPaymentInfo(String paymentInfo) {
         this.paymentInfo = paymentInfo;
+    }
+
+    public void setRole(int i) {
     }
 }

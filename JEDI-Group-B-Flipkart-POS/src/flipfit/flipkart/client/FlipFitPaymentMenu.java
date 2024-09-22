@@ -2,7 +2,7 @@ package flipfit.flipkart.client;
 import java.util.Scanner;
 public class FlipFitPaymentMenu {
 
-    public static boolean getFlipFitPaymentMenu(){
+    public static boolean getFlipFitPaymentMenu(int userID){
         Scanner sc = new Scanner(System.in);
 
         while(true){

@@ -1,39 +1,57 @@
 package flipfit.flipkart.business;
 
+import flipfit.flipkart.DAO.FlipFitAdminDAOImpl;
+import flipfit.flipkart.bean.*;
+
+import java.util.List;
+
 public class FlipFitAdminBusiness {
+    private final FlipFitAdminDAOImpl flipFitAdminDAOImpl;
 
-    public void adminLogin(){
-        System.out.println("Login");
-    }
-    public void validateOwner(){
-        System.out.println("Validating owner");
+    public FlipFitAdminBusiness(FlipFitAdminDAOImpl FFAdmin) {
+        this.flipFitAdminDAOImpl = FFAdmin;
     }
 
-    public void deleteOwner(){
-        System.out.println("Deleting owner");
-    }
-    public void getPendingOwnerList(){
-        System.out.println("Viewing pending owner List");
+    //admin login
+
+    public boolean adminLogin(FlipFitAdmin flipFitAdmin) {
+        return flipFitAdminDAOImpl.adminLogin(flipFitAdmin);
     }
 
-    public void getApprovedOwnerList(){
-        System.out.println("Viewing pending owner List");
+    //get pending owner list
+
+    public List<FlipFitGymOwner> getPendingOwnerList() {
+        return flipFitAdminDAOImpl.getPendingOwnerList();
     }
 
-    public void getCustomerList(){
-        System.out.println("Viewing FlipFit Customer List");
-    }
-    public void getGymCentreByOwnerId(int ownerId){
-        System.out.println("Viewing FlipFit Gym Centre of OwnerID " + ownerId);
-    }
-    public void updateAvailability(){
-        System.out.println("Availability");
-    }
-    public void getCenterDetails(){
-        System.out.println("Getting center details");
+    //approved owner list
+
+    public List<FlipFitGymOwner> getApprovedOwnerList() {
+        return flipFitAdminDAOImpl.getApprovedOwnerList();
     }
 
+    //get user list
 
+    public List<FlipFitCustomer> getUserList() {
+        return flipFitAdminDAOImpl.getUserList();
+    }
 
+    //validate gym owner
 
+    public boolean validateOwner(int ownerId) {
+        return flipFitAdminDAOImpl.validateOwner(ownerId);
+    }
+
+    //delete owner
+
+    public boolean deleteOwner(int ownerId) {
+        flipFitAdminDAOImpl.deleteOwner(ownerId);
+        return true;
+    }
+
+    //get center details
+
+    public List<FlipFitGymCentre> getGymCentreUsingOwnerId(int ownerId) {
+        return flipFitAdminDAOImpl.getGymCentreUsingOwnerId(ownerId);
+    }
 }

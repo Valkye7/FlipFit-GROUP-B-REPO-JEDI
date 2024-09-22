@@ -4,7 +4,7 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class FlipFitBookingDAO {
+public class FlipFitBookingDAOImpl {
 
         // Method to get the database connection
         private Connection getConnection() throws SQLException {

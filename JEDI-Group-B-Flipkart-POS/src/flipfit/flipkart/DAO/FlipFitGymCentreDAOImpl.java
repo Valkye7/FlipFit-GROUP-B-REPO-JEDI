@@ -5,7 +5,7 @@ import java.util.Random;
 import flipfit.flipkart.bean.FlipFitGymCentre;
 import flipfit.flipkart.bean.FlipFitSlots;
 
-public class FlipFitGymCentreDAO {
+public class FlipFitGymCentreDAOImpl {
     Random rand = new Random();
 
     private Connection getConnection() throws SQLException {

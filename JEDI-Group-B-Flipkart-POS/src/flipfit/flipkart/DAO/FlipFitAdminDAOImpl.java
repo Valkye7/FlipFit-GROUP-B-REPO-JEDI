@@ -4,7 +4,7 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class FlipFitAdminDAO {
+public class FlipFitAdminDAOImpl {
 
 
     private Connection getConnection() throws SQLException {
@@ -13,12 +13,12 @@ public class FlipFitAdminDAO {
 
     //adminLogin
 
-    public boolean adminLogin() {
+    public boolean adminLogin(FlipFitAdmin flipFitAdmin) {
         try (Connection conn = getConnection();
              PreparedStatement stmt = conn.prepareStatement("SELECT * FROM FlipFitGymAdmin WHERE email = ? AND password = ?")) {
 
-            stmt.setString(1, "admin@example.com");
-            stmt.setString(2, "password@123");
+            stmt.setString(1, flipFitAdmin.getEmailID());
+            stmt.setString(2, flipFitAdmin.getPassword());
 
             try (ResultSet rs = stmt.executeQuery()) {
                 boolean res = rs.next();
@@ -100,11 +100,11 @@ public class FlipFitAdminDAO {
 
     //validate owner
 
-    public boolean validateOwner() {
+    public boolean validateOwner(int ownerId) {
         try (Connection conn = getConnection();
              PreparedStatement stmt = conn.prepareStatement("UPDATE FlipFitGymOwner SET approved = 1 WHERE ownerID = ?")) {
 
-            stmt.setInt(1, 1001);
+            stmt.setInt(1, ownerId);
 
             int affectedRows = stmt.executeUpdate();
             if (affectedRows == 0) {
@@ -121,33 +121,32 @@ public class FlipFitAdminDAO {
 
     //delete owner
 
-    public boolean deleteOwner() {
+    public void deleteOwner(int ownerId) {
         try (Connection conn = getConnection();
              PreparedStatement stmt = conn.prepareStatement("DELETE FROM FlipFitGymOwner WHERE ownerID = ?")) {
 
-            stmt.setInt(1, 1001);
+            stmt.setInt(1, ownerId);
 
             int affectedRows = stmt.executeUpdate();
             if (affectedRows == 0) {
                 System.out.println("Failed to delete owner");
-                return false;
+                return;
             }
         } catch (SQLException e) {
             System.out.println("Error deleting owner: " + e.getMessage());
-            return false;
+            return;
         }
         System.out.println("Owner deleted successfully");
-        return true;
     }
 
     //get list of gym centers
 
-    public List<FlipFitGymCentre> getGymCentreUsingOwnerId() {
+    public List<FlipFitGymCentre> getGymCentreUsingOwnerId(int ownerId) {
         List<FlipFitGymCentre> gymCentres = new ArrayList<>();
         try (Connection conn = getConnection();
              PreparedStatement stmt = conn.prepareStatement("SELECT * FROM FlipFitGymCentre WHERE owner_ID = ? AND approved = 1")) {
 
-            stmt.setInt(1, 1001); // Hardcoded owner ID
+            stmt.setInt(1, ownerId);
 
             try (ResultSet rs = stmt.executeQuery()) {
                 while (rs.next()) {
