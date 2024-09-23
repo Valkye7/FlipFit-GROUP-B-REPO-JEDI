@@ -28,7 +28,7 @@ public class FlipFitUpdatePasswordDAOImpl {
             }
 
         } catch (SQLException e) {
-            System.out.println("Error validating old password: " + e.getMessage());
+            System.out.println("Error validating old password : " + e.getMessage());
             return false;
         }
     }

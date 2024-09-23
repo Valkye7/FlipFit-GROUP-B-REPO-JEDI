@@ -28,7 +28,7 @@ public class FlipFitUpdatePasswordBusiness {
 
 
             if (newPassword == null || newPassword.length() < 6) {
-                System.out.println("New password must be at least 6 characters long.");
+                System.out.println("New password must be at least 6 characters long. ");
             } else {
 
                 boolean isUpdated = flipFitUpdatePasswordDAO.updateUserPassword(email, oldPassword, newPassword);

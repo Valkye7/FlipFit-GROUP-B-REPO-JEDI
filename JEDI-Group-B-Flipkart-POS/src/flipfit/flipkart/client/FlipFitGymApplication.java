@@ -24,7 +24,7 @@ public class FlipFitGymApplication {
             int decision = in.nextInt();
             switch (decision) {
                 case 1: {
-                    System.out.println("Welcome To FlipFit");
+                    System.out.println("Welcome To FlipFit ");
                     System.out.println("Enter your emailId:> ");
                     String username = in.next();
                     System.out.println("Enter your password:> ");

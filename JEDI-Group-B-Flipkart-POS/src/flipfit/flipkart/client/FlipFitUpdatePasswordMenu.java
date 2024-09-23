@@ -18,7 +18,7 @@ public class FlipFitUpdatePasswordMenu {
         int choice;
 
         do {
-            System.out.println("\n---- FlipFit Password Update Menu ----");
+            System.out.println("\n----- FlipFit Password Update Menu -----");
             System.out.println("1. Update Password");
             System.out.println("2. Exit");
             System.out.print("Enter your choice: ");
