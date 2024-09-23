@@ -10,7 +10,7 @@ public class FlipFitGymApplication {
 
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
-        while (true){
+        while (true) {
             System.out.println(" ");
             System.out.println("------------------------------------------------");
             System.out.println("------ Welcome To FlipFit Gym Application ------");
@@ -120,40 +120,30 @@ public class FlipFitGymApplication {
                     break;
                 }
                 case 4: {
-                    int maxRetry = 3;
-                    int currentRetry = 0;
-                    while (currentRetry != maxRetry) {
-                        System.out.println("--------- Update Password ---------");
-                        System.out.print("Enter your role :-> Customer/GymOwner ");
-                        String role = in.next();
-                        System.out.println("Enter your Username");
-                        String username = in.next();
-                        System.out.print("Enter your old password:");
-                        String oldPassword = in.next();
-                        if (oldPassword != null) {
-                            System.out.print("Enter your new password:");
-                            String newPassword = in.next();
-                            System.out.print("Your password has been updated");
-                            switch (role) {
-                                case "Customer": {
-                                    System.out.println("------  Customer Menu --------");
-                                    getFlipFitCustomerMenu();
-                                    break;
-                                }
-                                case "GymOwner": {
-                                    System.out.println("------  Gym Owner Menu --------");
-                                    getFlipFitGymOwnerView();
-                                    break;
-                                }
-                            }
+                    System.out.println("--------- Update Password ---------");
+                    System.out.print("Enter your email: ");
+                    String email = in.next();
+                    System.out.print("Enter your role :-> Customer/GymOwner ");
+                    String role = in.next();
+
+                    // Calling the password update menu
+                    FlipFitUpdatePasswordMenu passwordMenu = new FlipFitUpdatePasswordMenu();
+                    passwordMenu.showUpdatePasswordMenu(email);
+
+                    switch (role) {
+                        case "Customer": {
+                            System.out.println("------  Customer Menu --------");
+                            getFlipFitCustomerMenu();
                             break;
-                        } else {
-                            System.out.print("Invalid Old Password, Please try again");
-                            currentRetry++;
                         }
-                    }
-                    if (currentRetry == maxRetry) {
-                        System.out.println("-------- Please try again later after some time --------");
+                        case "GymOwner": {
+                            System.out.println("------  Gym Owner Menu --------");
+                            getFlipFitGymOwnerView();
+                            break;
+                        }
+                        default:
+                            System.out.println("Invalid Role!");
+                            break;
                     }
                     break;
                 }
